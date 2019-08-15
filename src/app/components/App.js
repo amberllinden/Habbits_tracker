@@ -1,9 +1,17 @@
 import React, { Component } from "react";
+import { FirstTracker } from "./FirstTracker.js";
 
-class App extends Component {
+
+export class App extends Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
-            <div></div>
+            <div>
+                <FirstTracker />
+            </div>
+            
         );
     }
 }
