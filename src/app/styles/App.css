@@ -81,3 +81,15 @@ body {
     width: 20px;
     height: 20px;
 }
+
+.first_tracker--constructor {
+    display: flex;
+    display: -webkit-flex;
+    background: AliceBlue;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    margin: 5px;
+    padding: 5px;
+}
