@@ -1,4 +1,5 @@
 @import url('reset.css');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Caveat|Kurale|Lobster|Marck+Script|Open+Sans|Open+Sans+Condensed:300|Pacifico|Rubik+Mono+One|Underdog&display=swap');
 
 body {
     width: 100%;
@@ -31,7 +32,7 @@ body {
 }
 .first_tracker--title {
     display: block;
-    margin: 25px 25px 0px 25px;
+    padding: 10px;
 }
 
 .first_tracker--title_block--month {
@@ -92,4 +93,35 @@ body {
     -webkit-justify-content: space-around;
     margin: 5px;
     padding: 5px;
+}
+
+.opensans {
+    font-family: 'Open Sans', sans-serif;
+}
+.condensed {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.lobster {
+    font-family: 'Lobster', cursive;
+}
+.pacifico {
+    font-family: 'Pacifico', cursive;
+}
+.amatic {
+    font-family: 'Amatic SC', cursive;
+}
+.caveat {
+    font-family: 'Caveat', cursive;
+}
+.rubik {
+    font-family: 'Rubik Mono One', sans-serif;
+}
+.kurale {
+    font-family: 'Kurale', serif;
+}
+.underdog {
+    font-family: 'Underdog', cursive;
+}
+.marck {
+    font-family: 'Marck Script', cursive;
 }
