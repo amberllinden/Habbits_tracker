@@ -14,12 +14,14 @@ export class FirstTracker extends Component
             title_text: '',
             month_text: '',
             qoute_text: '',
-            font_value: ''
+            font_value: '',
+            color_font_value: ''
         }
         this.changeTitle = this.changeTitle.bind(this);
         this.changeMonth = this.changeMonth.bind(this);
         this.changeQoute = this.changeQoute.bind(this);
         this.changeFont = this.changeFont.bind(this);
+        this.changeColorFont = this.changeColorFont.bind(this);
     }
 
     changeTitle(event) {
@@ -34,10 +36,14 @@ export class FirstTracker extends Component
     changeFont(event) {
         event.target.value == 'Выберите шрифт' ? this.setState({ font_value: '' }) : this.setState({ font_value: event.target.value })
     }
+    changeColorFont(event) {
+        event.target.value == '0' ? this.setState({ color_font_value: '' }) : this.setState({ color_font_value: event.target.value })
+    }
 
     render() {
-        let { title_text, month_text, qoute_text, font_value } = this.state;
+        let { title_text, month_text, qoute_text, font_value, color_font_value } = this.state;
         const fonts = data_obj.fonts;
+        const colors_fonts = data_obj.colors_fonts;
 
         return (
             <section className="first_tracker">
@@ -50,11 +56,16 @@ export class FirstTracker extends Component
                             fonts.map((font, index) => <option key={index} value={font.name}>{font.name}</option>)
                         }
                     </select>
+                    <select name="color_font_select" value={color_font_value} onChange={this.changeColorFont}>
+                        {
+                            colors_fonts.map((color_fonts, index) => <option key={index} value={color_fonts.value}>{color_fonts.name}</option>)
+                        }
+                    </select>
                 </div>
                 <FirstTrackerTitleBlock
-                    title_block={`first_tracker--title_block--title ${font_value}`}
-                    month_block={`first_tracker--title_block--month ${font_value}`}
-                    qoute_block={`first_tracker--title_block--quote ${font_value}`}
+                    title_block={`first_tracker--title_block--title ${font_value} ${color_font_value}`}
+                    month_block={`first_tracker--title_block--month ${font_value} ${color_font_value}`}
+                    qoute_block={`first_tracker--title_block--quote ${font_value} ${color_font_value}`}
                     span_class={'first_tracker--title'}
                     title_text={title_text}
                     month_text={month_text}

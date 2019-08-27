@@ -35,9 +35,6 @@ body {
     padding: 10px;
 }
 
-.first_tracker--title_block--month {
-    border-style: none none solid none;
-}
 .first_tracker--calendar_and_habbits {
     display: flex;
     display: -webkit-flex;
@@ -124,4 +121,35 @@ body {
 }
 .marck {
     font-family: 'Marck Script', cursive;
+}
+
+.crimson {
+    color: crimson
+}
+.deeppink {
+    color: deeppink
+}
+.darkviolet {
+    color: darkviolet
+}
+.blue {
+    color: blue
+}
+.seagreen {
+    color: seagreen
+}
+.orangered {
+    color: orangered
+}
+.red {
+    color: red
+}
+.palevioletred {
+    color: palevioletred
+}
+.darkturquoise {
+    color: darkturquoise
+}
+.saddlebrown {
+    color: saddlebrown
 }
