@@ -35,5 +35,51 @@ export  const data_obj = {
           value: "darkturquoise"},
         { name: "Saddlebrown",
           value: "saddlebrown"},
+    ],
+    color_habbits_lines : [
+      {
+        name: "Выберите цвет",
+        value: "0"
+      },
+      {
+        name: "Crimson",
+        value: "crimson-border"
+      },
+      {
+        name: "Deeppink",
+        value: "deeppink-border"
+      },
+      {
+        name: "Darkviolet",
+        value: "darkviolet-border"
+      },
+      {
+        name: "Blue",
+        value: "blue-border"
+      },
+      {
+        name: "Seagreen",
+        value: "seagreen-border"
+      },
+      {
+        name: "Orengered",
+        value: "orangered-border"
+      },
+      {
+        name: "Red",
+        value: "red-border"
+      },
+      {
+        name: "Palevioletred",
+        value: "palevioletred-border"
+      },
+      {
+        name: "Darckturquoise",
+        value: "darkturquoise-border"
+      },
+      {
+        name: "Saddlebrown",
+        value: "saddlebrown-border"
+      },
     ]
 }

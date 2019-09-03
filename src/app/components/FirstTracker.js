@@ -15,13 +15,17 @@ export class FirstTracker extends Component
             month_text: '',
             qoute_text: '',
             font_value: '',
-            color_font_value: ''
+            color_font_value: '', 
+            color_habbits_line: '',
+            color_circle: ''
         }
         this.changeTitle = this.changeTitle.bind(this);
         this.changeMonth = this.changeMonth.bind(this);
         this.changeQoute = this.changeQoute.bind(this);
         this.changeFont = this.changeFont.bind(this);
         this.changeColorFont = this.changeColorFont.bind(this);
+        this.changeColorHabbitsLine = this.changeColorHabbitsLine.bind(this);
+        this.changeColorCircle = this.changeColorCircle.bind(this);
     }
 
     changeTitle(event) {
@@ -39,11 +43,16 @@ export class FirstTracker extends Component
     changeColorFont(event) {
         event.target.value == '0' ? this.setState({ color_font_value: '' }) : this.setState({ color_font_value: event.target.value })
     }
+    changeColorHabbitsLine(event) {
+        event.target.value == '0' ? this.setState({ color_habbits_line: '' }) : this.setState({ color_habbits_line: event.target.value })
+    }
+    changeColorCircle(event) {
+        event.target.value == '0' ? this.setState({ color_circle: '' }) : this.setState({ color_circle: event.target.value })
+    }
 
     render() {
-        let { title_text, month_text, qoute_text, font_value, color_font_value } = this.state;
-        const fonts = data_obj.fonts;
-        const colors_fonts = data_obj.colors_fonts;
+        let { title_text, month_text, qoute_text, font_value, color_font_value, color_habbits_line, color_circle } = this.state;
+        const { fonts, colors_fonts, color_habbits_lines } = data_obj; 
 
         return (
             <section className="first_tracker">
@@ -61,6 +70,16 @@ export class FirstTracker extends Component
                             colors_fonts.map((color_fonts, index) => <option key={index} value={color_fonts.value}>{color_fonts.name}</option>)
                         }
                     </select>
+                    <select name="border_select" value={color_habbits_line} onChange={this.changeColorHabbitsLine}>
+                        {
+                            color_habbits_lines.map((color_habbit_line, index) => <option key={index} value={color_habbit_line.value}>{color_habbit_line.name}</option>)
+                        }
+                    </select>
+                    <select name="border_select_circle" value={color_circle} onChange={this.changeColorCircle}>
+                        {
+                            color_habbits_lines.map((color_habbit_line, index) => <option key={index} value={color_habbit_line.value}>{color_habbit_line.name}</option>)
+                        }
+                    </select>
                 </div>
                 <FirstTrackerTitleBlock
                     title_block={`first_tracker--title_block--title ${font_value} ${color_font_value}`}
@@ -73,11 +92,11 @@ export class FirstTracker extends Component
                 />
                 <div className="first_tracker--calendar_and_habbits">
                     <FirstTrackerHabbitsblockForStrings 
-                        habbit_string_class={'first_tracker--strings_habbits'}
+                        habbit_string_class={`first_tracker--strings_habbits ${color_habbits_line}`}
                     />
                     <FirstTrackerStringWithDays
-                        class_for_string_days={'first_tracker--day'}
-                        class_for_container_days={'first_tracker--container_for_days'}
+                        class_for_container_days={'first_tracker--container_for_days '}
+                        class_for_string_days={`first_tracker--day ${color_circle}`}
                     />
                 </div>
             </section>
