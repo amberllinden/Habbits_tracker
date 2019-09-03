@@ -1,1 +1,194 @@
 @import url('reset.css');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Caveat|Kurale|Lobster|Marck+Script|Open+Sans|Open+Sans+Condensed:300|Pacifico|Rubik+Mono+One|Underdog&display=swap');
+
+body {
+    width: 100%;
+    margin: auto;
+}
+.first_tracker {
+    display: flex;
+    display: -webkit-flex; 
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+}
+.first_tracker--titles {
+    display: flex;
+    display: -webkit-flex; 
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+    margin: 15px 15px 30px 15px;
+    padding: 5px;
+}
+.first_tracker--title_block--title, .first_tracker--title_block--month, .first_tracker--title_block--quote {
+    width: 250px;
+    height: 100px;
+    border: 1px solid black;
+}
+.first_tracker--title {
+    display: block;
+    padding: 10px;
+}
+
+.first_tracker--calendar_and_habbits {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: space-evenly;
+    -webkit-justify-content: space-evenly;
+    margin: 5px;
+    padding: 5px;
+}
+.first_tracker--habbits_block--for_strings {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+.first_tracker--strings_habbits {
+    display: flex;
+    display: -webkit-flex; 
+    width: 350px;
+    height: 49px;
+    border-bottom: 1px solid black;
+}
+.first_tracker--container_for_days {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    height: 50px;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+}
+.first_tracker--day {
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 20px;
+    height: 20px;
+}
+
+.first_tracker--constructor {
+    display: flex;
+    display: -webkit-flex;
+    background: AliceBlue;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    margin: 5px;
+    padding: 5px;
+}
+
+.opensans {
+    font-family: 'Open Sans', sans-serif;
+}
+.condensed {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.lobster {
+    font-family: 'Lobster', cursive;
+}
+.pacifico {
+    font-family: 'Pacifico', cursive;
+}
+.amatic {
+    font-family: 'Amatic SC', cursive;
+}
+.caveat {
+    font-family: 'Caveat', cursive;
+}
+.rubik {
+    font-family: 'Rubik Mono One', sans-serif;
+}
+.kurale {
+    font-family: 'Kurale', serif;
+}
+.underdog {
+    font-family: 'Underdog', cursive;
+}
+.marck {
+    font-family: 'Marck Script', cursive;
+}
+
+.crimson {
+    color: crimson;
+    border: 1px solid transparent;
+}
+.deeppink {
+    color: deeppink;
+    border: 1px solid transparent;
+}
+.darkviolet {
+    color: darkviolet;
+    border: 1px solid transparent;
+}
+.blue {
+    color: blue;
+    border: 1px solid transparent;
+}
+.seagreen {
+    color: seagreen;
+    border: 1px solid transparent;
+}
+.orangered {
+    color: orangered;
+    border: 1px solid transparent;
+}
+.red {
+    color: red;
+    border: 1px solid transparent;
+}
+.palevioletred {
+    color: palevioletred;
+    border: 1px solid transparent;
+}
+.darkturquoise {
+    color: darkturquoise;
+    border: 1px solid transparent;
+}
+.saddlebrown {
+    color: saddlebrown;
+    border: 1px solid transparent;
+}
+
+.crimson-border {
+    border-color: crimson;
+}
+.deeppink-border {
+    border-color: deeppink;
+}
+.darkviolet-border {
+    border-color: darkviolet;
+}
+.blue-border {
+    border-color: blue;
+}
+.seagreen-border {
+    border-color: seagreen;
+}
+.orangered-border {
+    border-color: orangered;
+}
+.red-border {
+    border-color: red;
+}
+.palevioletred-border {
+    border-color: palevioletred;
+}
+.darkturquoise-border {
+    border-color: darkturquoise;
+}
+.saddlebrown-border {
+    border-color: saddlebrown;
+}
+
