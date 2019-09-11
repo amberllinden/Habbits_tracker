@@ -192,3 +192,123 @@ body {
     border-color: saddlebrown;
 }
 
+ .second_tracker {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    margin: 50px 15px 15px 15px;
+    padding: 5px;
+}
+.second_tracker--first_circle_group {
+    stroke-width: 1;
+    stroke: black;
+    fill: none;
+}
+.second_tracker--first_line_group {
+    stroke-width: 1;
+    stroke: black;
+}
+.second_tracker--polyline {
+    fill: white;
+}
+.second_tracker--second_line_group {
+    stroke-width: 1;
+    stroke: black;    
+}
+.second_tracker--center_circle {
+stroke-width: 1;
+stroke: black;
+fill: white;    
+}
+
+.second_tracker-selects {
+    display: flex;
+    flex-direction: column;
+}
+.second_tracker_select {
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.crimson-first {
+    stroke-width: 1;
+    stroke: crimson;
+}
+.deeppink-first {
+    stroke-width: 1;
+    stroke: deeppink;
+}
+.darkviolet-first {
+    stroke-width: 1;
+    stroke: darkviolet;
+}
+.blue-first {
+    stroke-width: 1;
+    stroke: blue;
+}
+.seagreen-first {
+    stroke-width: 1;
+    stroke: seagreen;
+}
+.orangered-first {
+    stroke-width: 1;
+    stroke: orangered;
+}
+.red-first {
+    stroke-width: 1;
+    stroke: red;
+}
+.palevioletred-first {
+    stroke-width: 1;
+    stroke: palevioletred;
+}
+.darkturquoise-first {
+    stroke-width: 1;
+    stroke: darkturquoise;
+}
+.saddlebrown-first {
+    stroke-width: 1;
+    stroke: saddlebrown;
+}
+.crimson-center_circle {
+    stroke-width: 1;
+    stroke: crimson;
+}
+.deeppink-center_circle {
+    stroke-width: 1;
+    stroke: deeppink;
+}
+.darkviolet-center_circle {
+    stroke-width: 1;
+    stroke: darkviolet;
+}
+.blue-center_circle {
+    stroke-width: 1;
+    stroke: blue;
+}
+.seagreen-center_circle {
+    stroke-width: 1;
+    stroke: seagreen;
+}
+.orangered-center_circle {
+    stroke-width: 1;
+    stroke: orangered;
+}
+.red-center_circle {
+    stroke-width: 1;
+    stroke: red;
+}
+.palevioletred-center_circle {
+    stroke-width: 1;
+    stroke: palevioletred;
+}
+.darkturquoise-center_circle {
+    stroke-width: 1;
+    stroke: darkturquoise;
+}
+.saddlebrown-center_circle {
+    stroke-width: 1;
+    stroke: saddlebrown;
+}
