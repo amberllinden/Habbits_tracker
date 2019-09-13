@@ -312,3 +312,46 @@ fill: white;
     stroke-width: 1;
     stroke: saddlebrown;
 }
+.third_tracker {
+    display: flex;
+    display: -webkit-flex;
+    margin: 30px 15px 15px 15px;
+    padding: 5px;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+.third_tracker--week {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+}
+.third_tracker--day {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+.third_tracker_title_day {
+    display: flex;
+    display: -webkit-flex;
+    margin-bottom: 5px;
+}
+.third_tracker--habbit {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    border-bottom: 1px solid black;
+    width: 150px;
+    margin: 5px;
+    padding: 5px;
+}
