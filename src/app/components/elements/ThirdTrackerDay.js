@@ -11,7 +11,7 @@ export class ThirdTrackerDay extends Component {
             divs.push((<div className={this.props.habbit} key={i}></div>))
         }
         return (
-            <div>
+            <div className={this.props.day_habbit}>
                 <span className={this.props.span_habbit}>{this.props.day}</span>
                 {divs}
             </div>
