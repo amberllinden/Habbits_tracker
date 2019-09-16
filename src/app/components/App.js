@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FirstTracker } from "./FirstTracker.js";
 import { SecondTracker } from "./SecondTracker.js";
+import { ThirdTracker } from "./ThirdTracker.js";
 
 
 export class App extends Component {
@@ -12,6 +13,7 @@ export class App extends Component {
             <div>
                 <FirstTracker />
                 <SecondTracker />
+                <ThirdTracker />
             </div>
             
         );

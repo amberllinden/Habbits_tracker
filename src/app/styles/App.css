@@ -312,3 +312,137 @@ fill: white;
     stroke-width: 1;
     stroke: saddlebrown;
 }
+.third_tracker {
+    display: flex;
+    display: -webkit-flex;
+    margin: 30px 15px 15px 15px;
+    padding: 5px;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+.third_tracker--week {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+}
+.third_tracker--day {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    padding-bottom: 15px;
+}
+.third_tracker_title_day {
+    display: flex;
+    display: -webkit-flex;
+    margin-bottom: 5px;
+}
+.third_tracker--habbit {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    border-bottom: 1px solid black;
+    width: 150px;
+    margin: 5px;
+    padding: 5px;
+}
+.chernika {
+    color: #274684;
+}
+.chernika-hab {
+    border-bottom: 1px solid #0a3185;
+}
+.chernika-day {
+    background: #b9d5fd;
+}
+.flower {
+    color: #700208;
+}
+.flower-hab {
+    border-bottom: 1px solid #d12369;
+}
+.flower-day {
+    background: #e6bae4;
+}
+.green_flower {
+    color: #5a9d2d;
+}
+.green_flower-hab {
+    border-bottom: 1px solid #aec5aa;
+}
+.green_flower-day {
+    background: #ecf5ed;
+}
+.sukkulent {
+    color: #294552;
+}
+.sukkulent-hab {
+    border-bottom: 1px solid #597884;
+}
+.sukkulent-day {
+    background: #acc4ce;
+}
+.lilac {
+    color: #80379c;
+}
+.lilac-hab {
+    border-bottom: 1px solid #64267c;
+}
+.lilac-day {
+   background: #d69cf4;
+}
+.cheese {
+    color: #f1bc1a;
+}
+.cheese-hab {
+    border-bottom: 1px solid #ba9b00;
+}
+.cheese-day {
+    background: #fff0bd;
+}
+.fog {
+    color: #4a707a;
+}
+.fog-hab {
+    border-bottom: 1px solid #7697a0;
+}
+.fog-day {
+    background: #ddddda;
+}
+.sea_beach {
+    color: #003d60;
+}
+.sea_beach-hab {
+    border-bottom: 1px solid #00aab7;
+}
+.sea_beach-day {
+    background: #f9e3be;
+}
+.coffee {
+    color: #a55f41;
+}
+.coffee-hab {
+    border-bottom: 1px solid #503434;
+}
+.coffee-day {
+    background: #fceac6;
+}
+.chocolate {
+    color: #572219;
+}
+.chocolate-hab {
+    border-bottom: 1px solid #9d4b4c;
+}
+.chocolate-day {
+    background: #c9a2a3;
+}
