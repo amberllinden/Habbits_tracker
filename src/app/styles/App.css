@@ -217,9 +217,9 @@ body {
     stroke: black;    
 }
 .second_tracker--center_circle {
-stroke-width: 1;
-stroke: black;
-fill: white;    
+    stroke-width: 1;
+    stroke: black;
+    fill: white;    
 }
 
 .second_tracker-selects {
@@ -445,4 +445,18 @@ fill: white;
 }
 .chocolate-day {
     background: #c9a2a3;
+}
+
+.menu {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+}
+
+.menu--item {
+    display: block;
+    
 }
