@@ -13,7 +13,7 @@ export class Select extends Component {
             value={value} 
             onChange={(e) => changeStyle(e)}>
                 {
-                    arr.map((a, index) => <option key={index} value={a.name}>{a.name}</option>)
+                    arr.map((a, index) => <option key={index} value={a.value}>{a.name}</option>)
                 }
             </select>
         )
