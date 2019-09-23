@@ -10,7 +10,7 @@ export  const data_obj = {
         {name: "rubik"},
         {name: "kurale"},
         {name: "underdog"},
-        {name: "marc"}
+        {name: "marck"}
     ],
     colors_fonts : [
         { name: "Выберите цвет",
