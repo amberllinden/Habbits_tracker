@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { FirstTrackerTitleBlock } from './elements/FirstTrackerTitleBlock'
 import { FirstTrackerHabbitsblockForStrings } from "./elements/FirstTrackerHabbitsblockForStrings";
 import { FirstTrackerStringWithDays } from "./elements/FirstTrackerStringWithDays";
+import { Select } from "./elements/Select";
 import { data_obj } from "./data/styles";
 
 
@@ -60,11 +61,12 @@ export class FirstTracker extends Component
                     <input type="text" value={this.state.title_text} onChange={this.changeTitle} maxLength={145} placeholder="Название трекера"/>
                     <input type="text" value={this.state.month_text} onChange={this.changeMonth} maxLength={145} placeholder="Месяц трекера" />
                     <input type="text" value={this.state.qoute_text} onChange={this.changeQoute} maxLength={145} placeholder="Мотивационная цитата" />
-                    <select name="font_select" value={font_value} onChange={this.changeFont}>
-                        {
-                            fonts.map((font, index) => <option key={index} value={font.name}>{font.name}</option>)
-                        }
-                    </select>
+                    <Select
+                        value={font_value}
+                        arr={fonts}
+                        name="font_select"
+                        changeStyle={this.changeFont}
+                    />
                     <select name="color_font_select" value={color_font_value} onChange={this.changeColorFont}>
                         {
                             colors_fonts.map((color_fonts, index) => <option key={index} value={color_fonts.value}>{color_fonts.name}</option>)
