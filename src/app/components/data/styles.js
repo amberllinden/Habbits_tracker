@@ -93,7 +93,7 @@ export  const data_obj = {
         }
       },
       {
-        name: "1",
+        name: "Черника",
         value: "1",
         options: {
           color_day: "chernika-day",
@@ -102,7 +102,7 @@ export  const data_obj = {
         }
       },
       {
-        name: "2",
+        name: "Пион",
         value: "2",
         options: {
           color_day: "flower-day",
@@ -111,7 +111,7 @@ export  const data_obj = {
         }
       },
       {
-        name: "3",
+        name: "Ландыш",
         value: "3",
         options: { 
           color_day: "green_flower-day",
@@ -120,7 +120,7 @@ export  const data_obj = {
         }
       },
       {
-        name: "4",
+        name: "Суккулент",
         value: "4",
         options: {
           color_day: "sukkulent-day",
@@ -129,7 +129,7 @@ export  const data_obj = {
         }
       },
       {
-        name: "5",
+        name: "Сирень",
         value: "5",
           options: {
           color_day: "lilac-day",
@@ -138,7 +138,7 @@ export  const data_obj = {
         }
       },
       {
-        name: "6",
+        name: "Сыр",
         value: "6",
         options: {
           color_day: "cheese-day",
@@ -147,7 +147,7 @@ export  const data_obj = {
         }
       },
       {
-        name: "7",
+        name: "Туман",
         value: "7",
         options: {
           color_day: "fog-day",
@@ -156,7 +156,7 @@ export  const data_obj = {
         }
       },
       {
-        name: "8",
+        name: "Пляж",
         value: "8",
         options: {
           color_day: "sea_beach-day",
@@ -165,7 +165,7 @@ export  const data_obj = {
         }
       },
       {
-        name: "9",
+        name: "Кофе",
         value: "9",
         options: {
           color_day: "coffee-day",
@@ -174,7 +174,7 @@ export  const data_obj = {
         }
       },
       {
-        name: "10",
+        name: "Горячий шоколад",
         value: "10",
         options: {
           color_day: "chocolate-day",

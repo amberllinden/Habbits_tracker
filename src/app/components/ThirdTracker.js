@@ -27,9 +27,9 @@ export class ThirdTracker extends Component {
         let index_value = event.target.value;
         let scheme_obj = color_scheme[index_value].options;
         this.setState((prevState) => ({
-            scheme_options: Object.assign({}, prevState.scheme_options, scheme_obj)
+            scheme_options: Object.assign({}, prevState.scheme_options, scheme_obj),
+            select_name: index_value
         }))
-        this.setState({ select_name: event.target.value})
     }
 
     render() {
