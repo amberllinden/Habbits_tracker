@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { ThirdTrackerDay } from "./elements/ThirdTrackerDay";
+import { Select } from "./elements/Select";
 import { data_obj } from "./data/styles";
 
 export class ThirdTracker extends Component {
@@ -40,16 +41,18 @@ export class ThirdTracker extends Component {
         return (
             <section className="third_tracker">
                 <div className="second_tracker-selects">
-                <select className="second_tracker_select" value={font_style} onChange={this.changeFontStyle}>
-                    {
-                        fonts.map((font, index) => <option key={index} value={font.value}>{font.name}</option>)
-                    }
-                </select>
-                <select className="second_tracker_select" value={select_name} onChange={this.changeColorSheme}>
-                    {
-                        color_scheme.map((scheme, index) => <option key={index} value={scheme.value}>{scheme.name}</option>)
-                    }
-                </select>
+                    <Select
+                        value={font_style}
+                        arr={fonts}
+                        css_class="second_tracker_select"
+                        changeStyle={this.changeFontStyle}
+                    />
+                    <Select
+                        value={select_name}
+                        arr={color_scheme}
+                        css_class="second_tracker_select"
+                        changeStyle={this.changeColorSheme}
+                    />
                 </div>
                 {weeks.map((week) => ( 
                     <div key={week} className={`third_tracker--week`}>
