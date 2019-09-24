@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { data_obj } from "./data/styles";
+import { Select } from "./elements/Select";
 
 export class SecondTracker extends Component {
     constructor(props) {
@@ -33,26 +34,34 @@ export class SecondTracker extends Component {
         return (
             <section className="second_tracker">
                 <div className="second_tracker-selects">
-                    <select id="first_circles" value={first_circles} onChange={this.changeColorLine} className="second_tracker_select">
-                        {
-                            colors_fonts.map((colors_font, index) => <option key={index} value={colors_font.value}>{colors_font.name}</option>)
-                        }
-                    </select>
-                    <select id="first_lines" value={first_lines} onChange={this.changeColorLine} className="second_tracker_select">
-                        {
-                            colors_fonts.map((colors_font, index) => <option key={index} value={colors_font.value}>{colors_font.name}</option>)
-                        }
-                    </select>
-                    <select id="second_lines" value={second_lines}  onChange={this.changeColorLine} className="second_tracker_select">
-                        {
-                            colors_fonts.map((colors_font, index) => <option key={index} value={colors_font.value}>{colors_font.name}</option>)
-                        }
-                    </select>
-                    <select id="center_circle" value={center_circle}  onChange={this.changeColorLine} className="second_tracker_select">
-                        {
-                            colors_fonts.map((colors_font, index) => <option key={index} value={colors_font.value}>{colors_font.name}</option>)
-                        }
-                    </select>
+                    <Select
+                        value={first_circles}
+                        arr={colors_fonts}
+                        id="first_circles"
+                        css_class="second_tracker_select"
+                        changeStyle={this.changeColorLine}
+                    />
+                    <Select
+                        value={first_lines}
+                        arr={colors_fonts}
+                        id="first_lines"
+                        css_class="second_tracker_select"
+                        changeStyle={this.changeColorLine}
+                    />
+                    <Select
+                        value={second_lines}
+                        arr={colors_fonts}
+                        id="second_lines"
+                        css_class="second_tracker_select"
+                        changeStyle={this.changeColorLine}
+                    />
+                    <Select
+                        value={center_circle}
+                        arr={colors_fonts}
+                        id="center_circle"
+                        css_class="second_tracker_select"
+                        changeStyle={this.changeColorLine}
+                    />
                 </div> 
                 <svg version="1.1" baseProfile="full" width="600" height="600" xmlns="http://www.w3.org/2000/svg">
                     <g className={`second_tracker--first_circle_group ${first_circles}-first`}>

@@ -6,10 +6,12 @@ export class Select extends Component {
     }
 
     render() {
-        let { value, arr, name, changeStyle } = this.props;
+        let { value, arr, name, id, css_class, changeStyle } = this.props;
 
         return (
             <select name={name} 
+            id={id}
+            className={css_class}
             value={value} 
             onChange={(e) => changeStyle(e)}>
                 {
