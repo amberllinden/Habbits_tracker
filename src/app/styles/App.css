@@ -225,6 +225,8 @@ body {
 .second_tracker-selects {
     display: flex;
     flex-direction: column;
+    background: AliceBlue;
+    padding-bottom: 25px; 
 }
 .second_tracker_select {
     margin-top: 25px;
@@ -345,6 +347,7 @@ body {
     display: flex;
     display: -webkit-flex;
     margin-bottom: 5px;
+    padding-top: 15px;
 }
 .third_tracker--habbit {
     display: flex;
@@ -455,8 +458,20 @@ body {
     justify-content: space-around;
     -webkit-justify-content: space-around;
 }
-
 .menu--item {
     display: block;
-    
+}
+
+.download_button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    background: AliceBlue;
+    width: 140px;
+    height: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 0.88em;
+    text-align: center;
+    line-height: 20px;
 }

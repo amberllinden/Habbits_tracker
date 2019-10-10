@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import html2canvas from 'html2canvas';
 import { ThirdTrackerDay } from "./elements/ThirdTrackerDay";
 import { Select } from "./elements/Select";
 import { data_obj } from "./data/styles";
@@ -13,10 +14,22 @@ export class ThirdTracker extends Component {
                 color_day: '',
                 color_span: '',
                 color_habbit: ''
-            }
+            },
+            anchor: '#'
         }
         this.changeFontStyle = this.changeFontStyle.bind(this);
         this.changeColorSheme = this.changeColorSheme.bind(this);
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (this.state.font_style !== prevState.font_style || this.state.select_name !== prevState.select_name) {
+            const track = document.getElementsByClassName('third_tracker')[0];
+            html2canvas(track)
+                .then((canvas) => {
+                    let myImg = canvas.toDataURL('image/png');
+                    this.setState({ anchor: myImg })
+                })
+        } 
     }
 
     changeFontStyle(event) {
@@ -33,14 +46,14 @@ export class ThirdTracker extends Component {
     }
 
     render() {
-        let { font_style, scheme_options, select_name} = this.state;
+        let { font_style, scheme_options, select_name, anchor} = this.state;
         let { color_day, color_span, color_habbit } = scheme_options;
         const { fonts, color_scheme } = data_obj;
         const day_of_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
         const weeks = [1, 2, 3, 4];
         return (
             <section className="third_tracker">
-                <div className="second_tracker-selects">
+                <div data-html2canvas-ignore className="second_tracker-selects">
                     <Select
                         value={font_style}
                         arr={fonts}
@@ -67,6 +80,11 @@ export class ThirdTracker extends Component {
                     }
                 </div>))
                 }
+                <a
+                    className="download_button"
+                    href={anchor} 
+                    download="my_tracker.png"
+                    data-html2canvas-ignore>DONLOAD TRACKER</a>
             </section>
         )
     }
