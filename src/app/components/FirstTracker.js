@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import html2canvas from 'html2canvas';
 import { FirstTrackerTitleBlock } from './elements/FirstTrackerTitleBlock'
 import { FirstTrackerHabbitsblockForStrings } from "./elements/FirstTrackerHabbitsblockForStrings";
 import { FirstTrackerStringWithDays } from "./elements/FirstTrackerStringWithDays";
@@ -18,7 +19,8 @@ export class FirstTracker extends Component
             font_value: '',
             color_font_value: '', 
             color_habbits_line: '',
-            color_circle: ''
+            color_circle: '',
+            anchor: '#'
         }
         this.changeTitle = this.changeTitle.bind(this);
         this.changeMonth = this.changeMonth.bind(this);
@@ -27,6 +29,20 @@ export class FirstTracker extends Component
         this.changeColorFont = this.changeColorFont.bind(this);
         this.changeColorHabbitsLine = this.changeColorHabbitsLine.bind(this);
         this.changeColorCircle = this.changeColorCircle.bind(this);
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (this.state.title_text !== prevState.title_text || this.state.month_text !== prevState.month_text || 
+            this.state.qoute_text !== prevState.qoute_text || this.state.font_value !== prevState.font_value ||
+            this.state.color_font_value !== prevState.color_font_value || this.state.color_habbits_line !== prevState.color_habbits_line ||
+            this.state.color_circle !== prevState.color_circle) {
+            const track = document.getElementsByClassName('first_tracker')[0];
+            html2canvas(track)
+                .then((canvas) => {
+                    let myImg = canvas.toDataURL('image/png');
+                    this.setState({ anchor: myImg })
+                })
+        }
     }
 
     changeTitle(event) {
@@ -52,12 +68,12 @@ export class FirstTracker extends Component
     }
 
     render() {
-        let { title_text, month_text, qoute_text, font_value, color_font_value, color_habbits_line, color_circle } = this.state;
+        let { title_text, month_text, qoute_text, font_value, color_font_value, color_habbits_line, color_circle, anchor } = this.state;
         const { fonts, colors_fonts, color_habbits_lines } = data_obj; 
 
         return (
             <section className="first_tracker">
-                <div className="first_tracker--constructor">
+                <div data-html2canvas-ignore className="first_tracker--constructor">
                     <input type="text" value={this.state.title_text} onChange={this.changeTitle} maxLength={145} placeholder="Название трекера"/>
                     <input type="text" value={this.state.month_text} onChange={this.changeMonth} maxLength={145} placeholder="Месяц трекера" />
                     <input type="text" value={this.state.qoute_text} onChange={this.changeQoute} maxLength={145} placeholder="Мотивационная цитата" />
@@ -104,6 +120,11 @@ export class FirstTracker extends Component
                         class_for_string_days={`first_tracker--day ${color_circle}`}
                     />
                 </div>
+                <a
+                    className="download_button"
+                    href={anchor}
+                    download="my_tracker.png"
+                    data-html2canvas-ignore>DONLOAD TRACKER</a>
             </section>
         )
     }
