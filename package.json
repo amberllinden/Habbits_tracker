@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/amberllinden/Habits_tracker/issues"
   },
-  "homepage": "https://github.com/amberllinden/Habits_tracker#readme",
+  "homepage": "https://amberllinden.github.io/Habbits_tracker/",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
@@ -33,6 +35,7 @@
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "hookrouter": "^1.2.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
