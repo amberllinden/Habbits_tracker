@@ -14,7 +14,7 @@ export class SecondTracker extends Component {
 
     render() {
         
-        const { colors_fonts } = data_obj; 
+        const { } = data_obj; 
 
         return (
             <div></div>
