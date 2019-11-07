@@ -187,36 +187,98 @@ export  const data_obj = {
     days_of_week_en: ["Mon", "Tus", "Wed", "Thu", "Fri", "Sat", "Sun"],
     icons: [
       {
+        name: "Выберите иконку",
+        value: "0"
+      },
+      {
         name: "Сердечко",
-        value: ""
+        value: "heart"
       },
       {
         name: "Закрашенная звезда",
-        value: ""
+        value: "full_star"
       },
       {
         name: "Незакрашенная звезда",
-        value: ""
+        value: "empty_star"
       },
       {
         name: "Закрашенная звезда с незакрашенным кругом внутри",
-        value: ""
+        value: "full_star_cirle"
       },
       {
         name: "Вращающаяся звезда",
-        value: ""
+        value: "roll_star"
       },
       {
         name: "Заострённая четырёхконечная незакрашенная звезда",
-        value: ""
+        value: "four_star"
       },
       {
         name: "Заострённая четырёхконечная закрашенная звезда",
-        value: ""
+        value: "full_four_star"
       },
       {
         name: "Огонь",
-        value: ""
+        value: "flame"
+      },
+    ],
+    colors_background: [
+      {
+        name: "Выберите цвет фона",
+        value: "0"
+      },
+      {
+        name: "",
+        value: "lavender"
+      },
+      {
+        name: "",
+        value: "cornsilk"
+      },
+      {
+        name: "",
+        value: "blanchedalmond"
+      },
+      {
+        name: "",
+        value: "bisque"
+      },
+      {
+        name: "",
+        value: "turquoise"
+      },
+      {
+        name: "",
+        value: "lightpink"
+      },
+      {
+        name: "",
+        value: "plum"
+      },
+      {
+        name: "",
+        value: "lightcoral"
+      },
+      {
+        name: "",
+        value: "honeydew"
+      },
+      {
+        name: "",
+        value: "mintcream"
+      },
+      {
+        name: "",
+        value: "seashell"
+      },
+      {
+        name: "",
+        value: "ivory"
+      },
+      {
+        name: "",
+        value: "linen"
       },
     ]
   }

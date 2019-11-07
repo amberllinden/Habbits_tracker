@@ -365,3 +365,200 @@ body {
     text-align: center;
     line-height: 20px;
 }
+
+.fourth_tracker {
+    display: flex;
+    flex-direction: column;
+}
+.titles {
+    border: 1px solid black;
+    padding: 2px;
+    margin: 0 auto;
+
+}
+.title_text {
+    border: 1px solid transparent;
+    padding: 2px;
+    margin: 5px;
+    width: 840px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+.type_track {
+    border: 1px solid black;
+    padding: 2px;
+    margin: 5px;
+}
+.title_type {
+    border: 1px solid black;
+    padding: 2px;
+    margin: 5px;
+    font-size: 18px;
+    text-align: center;   
+}
+.week {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid transparent;
+    padding: 5px;
+    margin: 5px;
+}
+.days {
+  border: 1px solid black;  
+  padding: 2px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 25px;
+  width: 30px;
+  height: 30px;
+  background: white;
+}
+.container_track {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+.container {  
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-between;
+}
+.title_day {
+    width: 30px;
+    height: 30px;
+    border: 1px solid transparent;  
+    padding: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 30px;
+}
+.tracker_select {
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+.tracker_select_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-between;
+    width: 500px;
+    margin: 10px;
+}
+
+.label_input {
+    display: flex;
+    flex-direction: row;
+}
+
+label {
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+.no_border {
+    border: 1px solid transparent;
+}
+
+.heart::before {
+    content: "♥";
+}
+.full_star::before {
+    content: "★";
+}
+.empty_star::before {
+    content: "☆";
+}
+.full_star_cirle::before {
+    content: "✫";
+}
+.roll_star::before {
+    content: "✯";
+}
+.four_star::before {
+    content: "✦";
+}
+.full_four_star::before {
+    content: "✧";
+}
+.flame::before {
+    content: "🔥";
+}
+
+.heart::after {
+   content: "♥"; 
+}
+.full_star::after {
+    content: "★";
+}
+.empty_star::after {
+    content: "☆";
+}
+.full_star_cirle::after {
+    content: "✫";
+}
+.roll_star::after {
+    content: "✯";
+}
+.four_star::after {
+    content: "✦";
+}
+.full_four_star::after {
+    content: "✧";
+}
+.flame::after {
+    content: "🔥";
+}
+
+.lavender {
+    background: lavender;
+}
+.cornsilk {
+    background: cornsilk;
+}
+.blanchedalmond {
+    background: blanchedalmond;
+}
+.bisque {
+    background: bisque;
+}
+.turquoise {
+    background: turquoise;
+}
+.lightpink {
+    background: lightpink;
+}
+.plum {
+    background: plum;
+}
+.lightcoral {
+    background: lightcoral;
+}
+.honeydew {
+    background: honeydew;
+}
+.mintcream {
+    background: mintcream;
+}
+.seashell {
+    background: seashell;
+}
+.ivory {
+    background: ivory;
+}
+.linen {
+    background: linen;
+}
