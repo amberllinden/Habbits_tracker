@@ -229,55 +229,55 @@ export  const data_obj = {
         value: "0"
       },
       {
-        name: "",
+        name: "Лаванда",
         value: "lavender"
       },
       {
-        name: "",
+        name: "Кукурузные рыльца",
         value: "cornsilk"
       },
       {
-        name: "",
+        name: "Бланшированный миндаль",
         value: "blanchedalmond"
       },
       {
-        name: "",
+        name: "Бисквит",
         value: "bisque"
       },
       {
-        name: "",
+        name: "Бирюзовый",
         value: "turquoise"
       },
       {
-        name: "",
+        name: "Светло-розовый",
         value: "lightpink"
       },
       {
-        name: "",
+        name: "Сливовый",
         value: "plum"
       },
       {
-        name: "",
+        name: "Светло-коралловый",
         value: "lightcoral"
       },
       {
-        name: "",
+        name: "Нектар",
         value: "honeydew"
       },
       {
-        name: "",
+        name: "Мятное мороженое",
         value: "mintcream"
       },
       {
-        name: "",
+        name: "Ракушка",
         value: "seashell"
       },
       {
-        name: "",
+        name: "Цвет слоновой кости",
         value: "ivory"
       },
       {
-        name: "",
+        name: "Лен",
         value: "linen"
       },
     ]
