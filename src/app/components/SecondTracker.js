@@ -1,105 +1,346 @@
 import React, { Component } from "react";
+import html2canvas from 'html2canvas';
 import { data_obj } from "./data/styles";
 import { Select } from "./elements/Select";
+import { Input } from "./elements/Input";
+import { FourthTrackerWeek } from "./elements/FourthTrackerWeek";
 
 export class SecondTracker extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            first_circles: '',
-            first_lines: '',
-            second_lines: '',
-            center_circle: '',
+            eng_days: true,
+            border_trackers: false,
+            icons_title: false,
+            font: '',
+            color_font: '',
+            title_icon: '',
+            color_background: '',
+            first_head_txt: 'Первый блок',
+            second_head_txt: 'Второй блок',
+            frst_tracker: 'Первый треккер',
+            scnd_tracker: 'Второй треккер',
+            thrd_tracker: 'Третий треккер',
+            frth_tracker: 'Четвертый треккер',            
+            anchor: '#'
         }
-
-        this.changeColorLine = this.changeColorLine.bind(this);
+        this.switchDays = this.switchDays.bind(this);
+        this.switchBorders = this.switchBorders.bind(this);
+        this.switchIcons = this.switchIcons.bind(this);
+        this.changeFont = this.changeFont.bind(this);
+        this.changeFontColor = this.changeFontColor.bind(this);
+        this.changeTitleIcon = this.changeTitleIcon.bind(this);
+        this.changeBackgroundColor = this.changeBackgroundColor.bind(this);
+        this.changeFirstTitle = this.changeFirstTitle.bind(this);
+        this.changeSecondTitle = this.changeSecondTitle.bind(this);
+        this.changeFrstTrackerTitle = this.changeFrstTrackerTitle.bind(this);
+        this.changeScndTrackerTitle = this.changeScndTrackerTitle.bind(this);
+        this.changeThrdTrackerTitle = this.changeThrdTrackerTitle.bind(this);
+        this.changeFthTrackerTitle = this.changeFthTrackerTitle.bind(this);
     }
 
-    changeColorLine(event) {
-        if (event.target.id == 'first_circles')
-            event.target.value == '0' ? this.setState({ first_circles: '' }) : this.setState({ first_circles: event.target.value })
-        if (event.target.id == 'first_lines')
-            event.target.value == '0' ? this.setState({ first_lines: '' }) : this.setState({ first_lines: event.target.value })  
-        if (event.target.id == 'second_lines')
-            event.target.value == '0' ? this.setState({ second_lines: '' }) : this.setState({ second_lines: event.target.value }) 
-        if (event.target.id == 'center_circle')
-            event.target.value == '0' ? this.setState({ center_circle: '' }) : this.setState({ center_circle: event.target.value })                
+    componentDidUpdate(prevProps, prevState) {
+        if (this.state.eng_days !== prevState.eng_days || this.state.border_trackers !== prevState.border_trackers ||
+            this.state.icons_title !== prevState.icons_title || this.state.font !== prevState.font ||
+            this.state.color_font !== prevState.color_font || this.state.title_icon !== prevState.title_icon ||
+            this.state.color_background !== prevState.color_background || this.state.first_head_txt !== prevState.first_head_txt ||
+            this.state.second_head_txt !== prevState.second_head_txt || this.state.frst_tracker !== prevState.frst_tracker ||
+            this.state.scnd_tracker !== prevState.scnd_tracker || this.state.thrd_tracker !== prevState.thrd_tracker ||
+            this.state.frth_tracker !== prevState.frth_tracker) {
+            const track = document.getElementsByClassName('fourth_tracker')[0];
+            html2canvas(track)
+                .then((canvas) => {
+                    let myImg = canvas.toDataURL('image/png');
+                    this.setState({ anchor: myImg })
+                })
+        }
+    }
+
+    switchDays() {
+        const { eng_days } = this.state;
+        if (eng_days) {
+            this.setState({ eng_days: false})
+        } else {
+            this.setState({ eng_days: true })
+        }
+    }
+
+    switchBorders() {
+        const { border_trackers } = this.state;
+        if (border_trackers) {
+            this.setState({ border_trackers: false })
+        } else {
+            this.setState({ border_trackers: true })
+        }
+    }
+
+    switchIcons() {
+        const { icons_title } = this.state;
+        if (icons_title) {
+            this.setState({ icons_title: false })
+        } else {
+            this.setState({ icons_title: true })
+        }
+    }
+
+    changeFont(event) {
+        event.target.value == 'Выберите шрифт' ? this.setState({ font: '' }) : this.setState({ font: event.target.value })
+    }
+
+    changeFontColor(event) {
+        event.target.value == 'Выберите цвет' ? this.setState({ color_font: '' }) : this.setState({ color_font: event.target.value })
+    }
+
+    changeTitleIcon(event) {
+        event.target.value == 'Выберите иконку' ? this.setState({ title_icon: '' }) : this.setState({ title_icon: event.target.value })
+    }
+
+    changeBackgroundColor(event) {
+        event.target.value == 'Цвет фона' ? this.setState({ color_background: '' }) : this.setState({ color_background: event.target.value })
+    }
+
+    changeFirstTitle(event) {
+        this.setState({ first_head_txt: event.target.value })
+    }
+
+    changeSecondTitle(event) {
+        this.setState({ second_head_txt: event.target.value })
+    }
+
+    changeFrstTrackerTitle(event) {
+        this.setState({ frst_tracker: event.target.value })
+    }
+
+    changeScndTrackerTitle(event) {
+        this.setState({ scnd_tracker: event.target.value })
+    }
+
+    changeThrdTrackerTitle(event) {
+        this.setState({ thrd_tracker: event.target.value })
+    }
+
+    changeFthTrackerTitle(event) {
+        this.setState({ frth_tracker: event.target.value })
     }
 
     render() {
-        let { first_circles, first_lines, second_lines, center_circle } = this.state;
-        const { colors_fonts } = data_obj; 
+        let { 
+            eng_days,
+            border_trackers,
+            icons_title,
+            font,
+            color_font,
+            title_icon,
+            color_background,
+            anchor,
+            first_head_txt,
+            second_head_txt,
+            frst_tracker,
+            scnd_tracker,
+            thrd_tracker,
+            frth_tracker,
+        } = this.state;
+        const { 
+            days_of_week_rus, 
+            days_of_week_en, 
+            icons, 
+            fonts, 
+            colors_fonts, 
+            colors_background
+        } = data_obj; 
+
+        const array_of_weeks = [0, 1, 2, 3, 4];
+        
 
         return (
-            <section className="second_tracker">
-                <div className="second_tracker-selects">
-                    <Select
-                        value={first_circles}
-                        arr={colors_fonts}
-                        id="first_circles"
-                        css_class="second_tracker_select"
-                        changeStyle={this.changeColorLine}
-                    />
-                    <Select
-                        value={first_lines}
-                        arr={colors_fonts}
-                        id="first_lines"
-                        css_class="second_tracker_select"
-                        changeStyle={this.changeColorLine}
-                    />
-                    <Select
-                        value={second_lines}
-                        arr={colors_fonts}
-                        id="second_lines"
-                        css_class="second_tracker_select"
-                        changeStyle={this.changeColorLine}
-                    />
-                    <Select
-                        value={center_circle}
-                        arr={colors_fonts}
-                        id="center_circle"
-                        css_class="second_tracker_select"
-                        changeStyle={this.changeColorLine}
-                    />
-                </div> 
-                <svg version="1.1" baseProfile="full" width="600" height="600" xmlns="http://www.w3.org/2000/svg">
-                    <g className={`second_tracker--first_circle_group ${first_circles}-first`}>
-                        <circle cx='250' cy='250' r='250'></circle>
-                        <circle cx='250' cy='250' r='230'></circle>
-                        <circle cx='250' cy='250' r='210'></circle>
-                        <circle cx='250' cy='250' r='190'></circle>
-                        <circle cx='250' cy='250' r='170'></circle>
-                        <circle cx='250' cy='250' r='150'></circle>
-                        <circle cx='250' cy='250' r='130'></circle>
-                        <circle cx='250' cy='250' r='110'></circle>
-                        <circle cx='250' cy='250' r='90'></circle>
-                        <circle cx='250' cy='250' r='70'></circle>
-                    </g>
-                    <g className={`second_tracker--first_line_group ${first_lines}-first`}>
-                        <line x1="73" x2="427" y1="73" y2="427"></line>
-                        <line x1="73" x2="427" y1="427" y2="73"></line>
-                        <line x1="0" x2="500" y1="250" y2="250"></line>
-                        <line x1="250" x2="250" y1="0" y2="500"></line>
-                        <line x1="250" x2="365" y1="250" y2="473"></line>
-                        <line x1="365" x2="137" y1="27" y2="473"></line>
-                        <line x1="35" x2="465" y1="125" y2="375"></line>
-                        <line x1="33" x2="467" y1="373" y2="127"></line>
-                    </g>
-                    <polyline className="second_tracker--polyline" points="63,63 250,250 250,-50"></polyline>
-                    <g className={`second_tracker--second_line_group ${second_lines}-first`}>
-                        <line x1="100" x2="250" y1="20" y2="20"></line>
-                        <line x1="115" x2="250" y1="40" y2="40"></line>
-                        <line x1="125" x2="250" y1="60" y2="60"></line>
-                        <line x1="135" x2="250" y1="80" y2="80"></line>
-                        <line x1="145" x2="250" y1="100" y2="100"></line>
-                        <line x1="155" x2="250" y1="120" y2="120"></line>
-                        <line x1="165" x2="250" y1="140" y2="140"></line>
-                        <line x1="175" x2="250" y1="160" y2="160"></line>
-                        <line x1="185" x2="250" y1="180" y2="180"></line>
-                    </g>
-                    <circle className={`second_tracker--center_circle ${center_circle}-center_circle`} cx='250' cy='250' r='50'></circle>
-                </svg>
+            <section className="fourth_tracker">
+                <div data-html2canvas-ignore className="tracker_select second_tracker-selects">
+                    <div className="tracker_select_column">
+                        <Select
+                            value={font}
+                            arr={fonts}
+                            css_class="second_tracker_select"
+                            changeStyle={this.changeFont}
+                        />
+                        <Select
+                            value={color_font}
+                            arr={colors_fonts}
+                            css_class="second_tracker_select"
+                            changeStyle={this.changeFontColor}
+                        />
+                        <Select
+                            value={color_background}
+                            arr={colors_background}
+                            css_class="second_tracker_select"
+                            changeStyle={this.changeBackgroundColor}
+                        />
+                        {icons_title &&
+                            <Select
+                                value={title_icon}
+                                arr={icons}
+                                css_class="second_tracker_select"
+                                changeStyle={this.changeTitleIcon}
+                            />
+                        }
+                    </div>
+                    <div className="tracker_select_column">
+                        <Input
+                            checked={eng_days}
+                            wrapper_css="label_input"
+                            input_name="days"
+                            input_type="checkbox"
+                            label="Дни недели на русском"
+                            value={eng_days}
+                            changeStyle={this.switchDays}
+                        />
+                        <Input
+                            checked={border_trackers}
+                            wrapper_css="label_input"
+                            input_name="tracker_border"
+                            input_type="checkbox"
+                            label="Наличие рамки у заголовков треккеров"
+                            changeStyle={this.switchBorders}
+                        />
+                        <Input
+                            checked={icons_title}
+                            wrapper_css="label_input"
+                            input_name="icons"
+                            input_type="checkbox"
+                            label="Значки у типов треккеров"
+                            changeStyle={this.switchIcons}
+                        />
+                        <Input
+                            type="text"
+                            value={first_head_txt}
+                            changeStyle={this.changeFirstTitle}
+                            wrapper_css="label_input"
+                            label="Текст в первом блоке"
+                        />
+
+                        <Input
+                            value={second_head_txt}
+                            changeStyle={this.changeSecondTitle}
+                            wrapper_css="label_input"
+                            label="Текст во втором блоке"
+                        />
+                        <Input
+                            value={frst_tracker}
+                            changeStyle={this.changeFrstTrackerTitle}
+                            wrapper_css="label_input"
+                            label="Название треккера 1"
+                        />
+                        <Input
+                            value={scnd_tracker}
+                            changeStyle={this.changeScndTrackerTitle}
+                            wrapper_css="label_input"
+                            label="Название треккера 2"
+                        />
+                        <Input
+                            value={thrd_tracker}
+                            changeStyle={this.changeThrdTrackerTitle}
+                            wrapper_css="label_input"
+                            label="Название треккера 3"
+                        />
+                        <Input
+                            value={frth_tracker}
+                            changeStyle={this.changeFthTrackerTitle}
+                            wrapper_css="label_input"
+                            label="Название треккера 3"
+                        />
+                    </div>
+                </div>
+                <div className={`titles ${color_background}`}>
+                    <div className={`title_text ${font} ${color_font}`}>{first_head_txt}</div>
+                    <div className={`title_text ${font} ${color_font}`}>{second_head_txt}</div>
+                </div>
+                <div className="container">
+                    <div className="container_track">
+                        <div className={`type_track ${color_background}`}>
+                            <div className={`title_type ${font} ${color_font} ${!border_trackers ? 'no_border' : ''} ${icons_title ? title_icon : ''}`}>
+                                {frst_tracker}
+                            </div>
+                        <FourthTrackerWeek
+                            is_week_array={true}
+                            week_array={eng_days ? days_of_week_en : days_of_week_rus}
+                            css_week="week"
+                            css_class="title_day"
+                        />
+                        {array_of_weeks.map(key => (
+                            <FourthTrackerWeek
+                                is_week_array={false}
+                                key={key}
+                                css_week={`week`}
+                                css_class={`days`}
+                            />))
+                        }
+                        </div>
+                        <div className={`type_track ${color_background}`}>
+                            <div className={`title_type ${font} ${color_font} ${!border_trackers ? 'no_border' : ''} ${icons_title ? title_icon : ''}`}>
+                                {scnd_tracker}
+                            </div>
+                            <FourthTrackerWeek
+                                is_week_array={true}
+                                week_array={eng_days ? days_of_week_en : days_of_week_rus}
+                                css_week="week"
+                                css_class="title_day"
+                            />
+                            {array_of_weeks.map(key => (
+                                <FourthTrackerWeek
+                                    is_week_array={false}
+                                    key={key}
+                                    css_week={`week`}
+                                    css_class={`days`}
+                                />))
+                            }
+                        </div>    
+                    </div>
+                    <div className={`container_track`}>
+                        <div className={`type_track ${color_background}`}>
+                            <div className={`title_type ${font} ${color_font} ${!border_trackers ? 'no_border' : ''} ${icons_title ? title_icon : ''}`}>
+                                {thrd_tracker}
+                            </div>
+                            <FourthTrackerWeek
+                                is_week_array={true}
+                                week_array={eng_days ? days_of_week_en : days_of_week_rus}
+                                css_week="week"
+                                css_class="title_day"
+                            />
+                            {array_of_weeks.map(key => (
+                                <FourthTrackerWeek
+                                    is_week_array={false}
+                                    key={key}
+                                    css_week={`week`}
+                                    css_class={`days`}
+                                />))
+                            }
+                        </div>
+                        <div className={`type_track ${color_background}`}>
+                            <div className={`title_type ${font} ${color_font} ${!border_trackers ? 'no_border' : ''} ${icons_title ? title_icon : ''}`}>
+                                {frth_tracker}
+                            </div>
+                            <FourthTrackerWeek
+                                is_week_array={true}
+                                week_array={eng_days ? days_of_week_en : days_of_week_rus}
+                                css_week="week"
+                                css_class="title_day"
+                            />
+                            {array_of_weeks.map(key => (
+                                <FourthTrackerWeek
+                                    is_week_array={false}
+                                    key={key}
+                                    css_week={`week`}
+                                    css_class={`days`}
+                                />))
+                            }
+                        </div>
+                    </div>
+                </div>
+                <a
+                    className="download_button"
+                    href={anchor}
+                    download="my_tracker.png"
+                    data-html2canvas-ignore>DONLOAD TRACKER</a>
             </section>
         )
     }

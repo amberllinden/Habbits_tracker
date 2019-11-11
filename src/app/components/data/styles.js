@@ -182,5 +182,103 @@ export  const data_obj = {
           color_habbit: "chocolate-hab",
         }
       }
+    ],
+    days_of_week_rus: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+    days_of_week_en: ["Mon", "Tus", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    icons: [
+      {
+        name: "Выберите иконку",
+        value: "0"
+      },
+      {
+        name: "Сердечко",
+        value: "heart"
+      },
+      {
+        name: "Закрашенная звезда",
+        value: "full_star"
+      },
+      {
+        name: "Незакрашенная звезда",
+        value: "empty_star"
+      },
+      {
+        name: "Закрашенная звезда с незакрашенным кругом внутри",
+        value: "full_star_cirle"
+      },
+      {
+        name: "Вращающаяся звезда",
+        value: "roll_star"
+      },
+      {
+        name: "Заострённая четырёхконечная незакрашенная звезда",
+        value: "four_star"
+      },
+      {
+        name: "Заострённая четырёхконечная закрашенная звезда",
+        value: "full_four_star"
+      },
+      {
+        name: "Огонь",
+        value: "flame"
+      },
+    ],
+    colors_background: [
+      {
+        name: "Выберите цвет фона",
+        value: "0"
+      },
+      {
+        name: "Лаванда",
+        value: "lavender"
+      },
+      {
+        name: "Кукурузные рыльца",
+        value: "cornsilk"
+      },
+      {
+        name: "Бланшированный миндаль",
+        value: "blanchedalmond"
+      },
+      {
+        name: "Бисквит",
+        value: "bisque"
+      },
+      {
+        name: "Бирюзовый",
+        value: "turquoise"
+      },
+      {
+        name: "Светло-розовый",
+        value: "lightpink"
+      },
+      {
+        name: "Сливовый",
+        value: "plum"
+      },
+      {
+        name: "Светло-коралловый",
+        value: "lightcoral"
+      },
+      {
+        name: "Нектар",
+        value: "honeydew"
+      },
+      {
+        name: "Мятное мороженое",
+        value: "mintcream"
+      },
+      {
+        name: "Ракушка",
+        value: "seashell"
+      },
+      {
+        name: "Цвет слоновой кости",
+        value: "ivory"
+      },
+      {
+        name: "Лен",
+        value: "linen"
+      },
     ]
   }
