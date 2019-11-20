@@ -4,6 +4,7 @@ import { FirstTrackerTitleBlock } from './elements/FirstTrackerTitleBlock'
 import { FirstTrackerHabbitsblockForStrings } from "./elements/FirstTrackerHabbitsblockForStrings";
 import { FirstTrackerStringWithDays } from "./elements/FirstTrackerStringWithDays";
 import { Select } from "./elements/Select";
+import { Button } from "./elements/Button";
 import { data_obj } from "./data/styles";
 
 
@@ -120,11 +121,13 @@ export class FirstTracker extends Component
                         class_for_string_days={`first_tracker--day ${color_circle}`}
                     />
                 </div>
-                <a
-                    className="download_button"
-                    href={anchor}
-                    download="my_tracker.png"
-                    data-html2canvas-ignore>DONLOAD TRACKER</a>
+                <Button 
+                    css_class={"download_button"}
+                    text={"DOWNLOAD TRACKER"}
+                    file_name={"my_tracker.png"}
+                    attrs={{"data-html2canvas-ignore": true}}
+                    anc={anchor}
+                />
             </section>
         )
     }
