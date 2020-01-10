@@ -4,6 +4,7 @@ import { data_obj } from "./data/styles";
 import { Select } from "./elements/Select";
 import { Input } from "./elements/Input";
 import { FourthTrackerWeek } from "./elements/FourthTrackerWeek";
+import { Button } from "./elements/Button";
 
 export class SecondTracker extends Component {
     constructor(props) {
@@ -336,11 +337,13 @@ export class SecondTracker extends Component {
                         </div>
                     </div>
                 </div>
-                <a
-                    className="download_button"
-                    href={anchor}
-                    download="my_tracker.png"
-                    data-html2canvas-ignore>DONLOAD TRACKER</a>
+                <Button
+                    css_class={"download_button"}
+                    text={"DOWNLOAD TRACKER"}
+                    file_name={"my_tracker.png"}
+                    attrs={{ "data-html2canvas-ignore": true }}
+                    anc={anchor}
+                />
             </section>
         )
     }

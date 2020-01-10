@@ -3,6 +3,7 @@ import html2canvas from 'html2canvas';
 import { ThirdTrackerDay } from "./elements/ThirdTrackerDay";
 import { Select } from "./elements/Select";
 import { data_obj } from "./data/styles";
+import { Button } from "./elements/Button";
 
 export class ThirdTracker extends Component {
     constructor(props) {
@@ -80,11 +81,13 @@ export class ThirdTracker extends Component {
                     }
                 </div>))
                 }
-                <a
-                    className="download_button"
-                    href={anchor} 
-                    download="my_tracker.png"
-                    data-html2canvas-ignore>DONLOAD TRACKER</a>
+                <Button
+                    css_class={"download_button"}
+                    text={"DOWNLOAD TRACKER"}
+                    file_name={"my_tracker.png"}
+                    attrs={{ "data-html2canvas-ignore": true }}
+                    anc={anchor}
+                />
             </section>
         )
     }
